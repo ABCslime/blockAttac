@@ -1,5 +1,7 @@
 package com.company;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.*;
@@ -61,6 +63,13 @@ public class mainFrame extends JFrame implements KeyListener {
                 ImageIcon icon = new ImageIcon("C:\\Users\\ANEJ\\Pictures\\igra\\meč.png");
 
                 JButton b = new JButton(resaiz(icon));
+                b.addActionListener(new ActionListener()
+                {
+                    public void actionPerformed(ActionEvent e) {
+                        System.out.println("prest");
+
+                    }
+                });
                 b.setBounds(50, 510, 30, 30);
                 frame.add(b);
                 frame.setLayout(null);
